@@ -1,0 +1,115 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background: rgb(21, 20, 20); */
+    background-color: transparent;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.active {
+    background: linear-gradient(to right, rgb(54, 201, 255), #fff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 2px solid white;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 20px;
+    /* padding: 0 20px; */
+    gap: 20px;
+    
+}
+nav ul li{
+    list-style: none;
+    margin: 0 1px;
+    font-size: 18px;
+    background: linear-gradient(to right, rgb(41, 221, 245), #fff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+}
+nav ul a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+nav ul a:hover {background: linear-gradient(to right, blue, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav h1 {font-size: 40px;
+    /* font-weight: 600; */
+    background: linear-gradient(to right,rgb(71, 193, 211), #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 20px;
+}
+.hamburger{
+    display: none;
+}
+.ham{
+    width: 30px;
+    height:1px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.5s;
+}
+.mobilemenu{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0000009b;
+    backdrop-filter: blur(7px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(110%);
+}
+.activemobilemenu{
+    transform: translateX(3.5%);
+}   
+.activehamburger .ham:nth-child(1){
+    position: relative;
+    transform: translateY(8px) rotate(45deg);
+}
+.activehamburger .ham:nth-child(2){
+    opacity: 0;
+}
+.activehamburger .ham:nth-child(3){
+    position: relative;
+    transform: translateY(-13px) rotate(-45deg);
+}
+@media (max-width: 768px) {
+    nav{
+        z-index: 100;
+    }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    .desktopmenu{
+        display: none;
+    }
+      
+
+}

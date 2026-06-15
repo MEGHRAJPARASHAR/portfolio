@@ -1,0 +1,52 @@
+.card{
+    width: 300px;
+    height: 180px;
+    overflow: hidden;
+    background-color: rgb(17, 16, 16);
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* border-radius: px; */
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5),
+    0 0 10px 0 rgba(0, 0, 0, 0.5);
+}   
+.hovercard img{
+    height:  60%;
+
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+    /* height: 30%;/ */
+}
+.hovercard{
+    width: 100%;
+    transition: all 0.5s ease;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(121, 205, 220), rgba(12, 17, 020, 0.4));
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+}
+.card:hover .hovercard{
+    transform: translateY(0);
+    background: linear-gradient(to top, rgb(18, 31, 33), rgba(12, 17, 020, 0.4));
+}
+.card:hover h1{
+    opacity: 0.0;
+}
+.card h1{
+    transition: all 0.5s ease;
+    z-index: 1;
+    background: linear-gradient(to right, #27aec2,#27aec2, white,white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card:hover{
+    box-shadow: 
+    6px 6px 10px 1px rgb(30, 167, 169);
+}
