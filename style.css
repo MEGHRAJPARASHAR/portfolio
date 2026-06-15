@@ -1,0 +1,46 @@
+        :root { --primary: #2563eb; --dark: #1e293b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { text-align: center; padding: 4rem 0; }
+        h1 { font-size: 4rem; margin-bottom: 1rem; background: linear-gradient(90deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .tagline { font-size: 1.5rem; opacity: 0.8; max-width: 600px; margin: 0 auto; }
+        .cta-container { margin: 3rem 0; }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 1rem;
+            transition: transform 0.3s;
+        }
+        .btn:hover { transform: translateY(-3px); }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+        }
+        #projects { padding: 4rem 0; }
+        .project-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        footer { text-align: center; padding: 3rem 0; opacity: 0.6; }
+    
