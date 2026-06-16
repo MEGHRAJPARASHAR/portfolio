@@ -6,38 +6,32 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
+import { useRef } from 'react';
 function Contact() {
+  const container = useRef();
   useGSAP(() => {
-    let tl1 = gsap.timeline();
-    tl1.from(".leftcontact img", {
+    gsap.from(".leftcontact img", {
       x: -300,
       opacity: 0,
-      stagger: 1,
+      duration: 1,
       scrollTrigger: {
-        trigger: ".leftcontact img",
-        scroll: "body",
+        trigger: ".contact",
         start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
       }
     });
-    let tl2 = gsap.timeline();
-    tl2.from(".rightcontact form", {
+    gsap.from(".rightcontact form", {
       x: 100,
       opacity: 0,
-      stagger: 1,
+      duration: 1,
       scrollTrigger: {
-        trigger: ".rightcontact form",
-        scroll: "body",
+        trigger: ".contact",
         start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
       }
     });
-  });
+  }, { scope: container });
 
   return (
-    <div id='contact' className='contact'>
+    <div id='contact' className='contact' ref={container}>
       <div className='leftcontact'>
         <img src={contactimg} alt="contact" />
       </div>

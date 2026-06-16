@@ -77,6 +77,7 @@ nav h1 {font-size: 40px;
     height: 100vh;
     background: #0000009b;
     backdrop-filter: blur(7px);
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -85,7 +86,7 @@ nav h1 {font-size: 40px;
     transform: translateX(110%);
 }
 .activemobilemenu{
-    transform: translateX(3.5%);
+    transform: translateX(0);
 }   
 .activehamburger .ham:nth-child(1){
     position: relative;
@@ -101,6 +102,8 @@ nav h1 {font-size: 40px;
 @media (max-width: 768px) {
     nav{
         z-index: 100;
+        background-color: rgba(10, 10, 10, 0.95);
+        padding: 5px 0;
     }
     .hamburger{
         display: flex;
@@ -110,6 +113,4 @@ nav h1 {font-size: 40px;
     .desktopmenu{
         display: none;
     }
-      
-
 }

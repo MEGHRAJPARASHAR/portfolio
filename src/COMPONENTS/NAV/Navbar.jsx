@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 function Navbar() {
+  const navRef = useRef(null);
   const menu = useRef(null);
   const mobile = useRef(null);
   const toggleMenu = () => {
@@ -29,10 +30,10 @@ function Navbar() {
       duration: 1,
       color: 'red'
     });
-  });
+  }, { scope: navRef });
 
   return (
-    <nav>
+    <nav ref={navRef}>
       <h1>PORTFOLIO</h1>
       <ul className='desktopmenu'>
         <Link to="home" activeClass="active" spy={true} smooth={true} duration={500}>
@@ -54,16 +55,16 @@ function Navbar() {
         <div className='ham'></div>
       </div>
       <ul className='mobilemenu' ref={mobile}>
-        <Link to="home" activeClass="active" spy={true} smooth={true} duration={500}>
+        <Link to="home" activeClass="active" spy={true} smooth={true} duration={500} onClick={toggleMenu}>
           <li>HOME</li>
         </Link>
-        <Link to="about" activeClass="active" spy={true} smooth={true} duration={500}>
+        <Link to="about" activeClass="active" spy={true} smooth={true} duration={500} onClick={toggleMenu}>
           <li>ABOUT</li>
         </Link>
-        <Link to="projects" activeClass="active" spy={true} smooth={true} duration={500}>
+        <Link to="projects" activeClass="active" spy={true} smooth={true} duration={500} onClick={toggleMenu}>
           <li>PROJECTS</li>
         </Link>
-        <Link to="contact" activeClass="active" spy={true} smooth={true} duration={500}>
+        <Link to="contact" activeClass="active" spy={true} smooth={true} duration={500} onClick={toggleMenu}>
           <li>CONTACT</li>
         </Link>
       </ul>

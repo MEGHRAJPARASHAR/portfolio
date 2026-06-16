@@ -5,7 +5,9 @@ import TypingEffect from "react-typing-effect";
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
+import { useRef } from 'react';
 function Home() {
+  const container = useRef();
   useGSAP(() => {
     let tl1 = gsap.timeline();
     tl1.from(".line1", {
@@ -27,10 +29,10 @@ function Home() {
       x: 100,
       opacity: 0,
     });
-  });
+  }, { scope: container });
 
   return (
-    <div id="home">
+    <div id="home" ref={container}>
       <div className="lefthome">
         <div className="homedetails">
           <div className="line1">I am</div>

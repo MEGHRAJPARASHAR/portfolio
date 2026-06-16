@@ -74,21 +74,32 @@
 @media (max-width: 768px) {
     #home{
         flex-direction: column-reverse;
-        
-    }
-    .homedetails{
-        font-size: 2rem;
-        /* text-align: center; */
+        height: auto;
+        padding: 80px 0 50px 0;
     }
     .lefthome{
         width: 100%;
-        height: 50vh;
+        height: auto;
+        min-height: 50vh;
+        padding-bottom: 30px;
     }
     .righthome{
         width: 100%;
-        height: 50vh;
+        height: auto;
+        min-height: 50vh;
+    }
+    .righthome img{
+        width: 80%;
     }
     .homedetails{
         width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+    .homedetails .line2{
+        font-size: 1.5em;
+    }
+    .homedetails .line3{
+        font-size: 0.8em;
     }
 }       

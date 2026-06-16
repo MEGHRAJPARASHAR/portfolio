@@ -67,36 +67,40 @@ form button {
         flex-direction: column;
         margin-top: 20px;
         display: flex;
-        padding: 20px;
-        justify-content: space-evenly;
+        padding: 60px 20px;
+        justify-content: center;
+        height: auto;
+        min-height: 100vh;
     }
     .leftcontact{
         width: 100%;
         margin-top: 20px;
+        height: auto;
     }
     .leftcontact img{
-        height: 50%;
+        height: auto;
+        width: 80%;
     }
     .rightcontact{
         width: 100%;
-        margin-top: -50px;
-        margin-bottom: 90px;
-        /* padding: 20px; */
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: auto;
     }
     .socials{
-       height: 100px;
+       height: auto;
        display: flex;
        justify-content: center;
        align-items: center;
-       width: 100px;
+       width: 100%;
        background:transparent;
+       margin-bottom: 20px;
     }
     form{
-        width: 70%;
-        height: 70%;
-        gap: 10px;
-        margin-top: -10px;
+        width: 90%;
+        height: auto;
+        gap: 15px;
+        margin-top: 20px;
         padding: 20px;
     }
-  
 }

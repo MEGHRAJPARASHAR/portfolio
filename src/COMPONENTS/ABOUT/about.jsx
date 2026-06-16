@@ -1,80 +1,71 @@
 import "./about.css";
 import Card from "../CARD/card";
 import mern from '../../assets/mern.png';
-import java from '../../assets/java.png';
-import dsa from '../../assets/dsa.png';
+import reactIcon from '../../assets/react.svg';
+import backendIcon from '../../assets/backend.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
+import { useRef } from 'react';
 function About() {
+  const container = useRef();
   useGSAP(() => {
-    let tl1 = gsap.timeline();
-    tl1.from(".circle", {
+    gsap.from(".circle", {
       x: -100,
       opacity: 0,
-      stagger: 1,
+      stagger: 0.2,
+      duration: 0.8,
       scrollTrigger: {
-        trigger: ".circle",
-        scroll: "body",
-        start: "top 60%",
-        end: "top 50%",
-        scrub: 2,
+        trigger: ".circle-line",
+        start: "top 70%",
       }
     });
-    tl1.from(".line", {
+    gsap.from(".line", {
       x: -100,
       opacity: 0,
-      stagger: 1,
+      stagger: 0.2,
+      duration: 0.8,
       scrollTrigger: {
-        trigger: ".line",
-        scroll: "body",
-        start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
+        trigger: ".circle-line",
+        start: "top 70%",
       }
     });
-    tl1.from(".aboutdetails h2", {
+    gsap.from(".aboutdetails h2", {
       x: -100,
       opacity: 0,
-      stagger: 1,
+      stagger: 0.2,
+      duration: 0.8,
       scrollTrigger: {
-        trigger: ".aboutdetails h2",
-        scroll: "body",
-        start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
+        trigger: ".aboutdetails",
+        start: "top 70%",
       }
     });
-    tl1.from(".aboutdetails li", {
-      y: 100,
+    gsap.from(".aboutdetails li", {
+      y: 50,
       opacity: 0,
-      stagger: 1,
+      stagger: 0.1,
+      duration: 0.5,
       scrollTrigger: {
-        trigger: ".aboutdetails h2",
-        scroll: "body",
-        start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
+        trigger: ".aboutdetails",
+        start: "top 70%",
       }
     });
-    tl1.from(".card", {
+    gsap.from(".card", {
       x: 100,
       opacity: 0,
-      stagger: 1,
+      stagger: 0.2,
+      duration: 0.8,
       scrollTrigger: {
-        trigger: ".aboutdetails h2",
-        scroll: "body",
-        start: "top 60%",
-        end: "top 30%",
-        scrub: 2,
+        trigger: ".rightabout",
+        start: "top 70%",
       }
     });
-  });
+  }, { scope: container });
 
   return (
-    <div id="about" className="about">
+    <div id="about" className="about" ref={container}>
       <div className="leftabout">
         <div className="circle-line">
           <div className="circle"></div>
@@ -109,18 +100,25 @@ function About() {
             <h2>Skills Info</h2>
             <ul>
               <li>
-                <span className="red">Front-end: </span>
-                <span className="blue">HTML , CSS 192.168.0.181 , JS , React</span>
+                <span className="red">Backend: </span>
+                <span className="blue">Node.js, Express.js, PHP, REST API, JWT Auth, Nodemailer, bcryptjs, express-rate-limit</span>
               </li>
               <li>
-                <span className="red">Back-end: </span>
-                <span className="blue">Node.js , Express.js , php</span>
+                <span className="red">Frontend: </span>
+                <span className="blue">React.js, Redux Toolkit, TailwindCSS, HTML, CSS, JavaScript, Axios, React Router DOM</span>
               </li>
               <li>
-                <span className="red">stack: </span>
-                <span className="blue">MERN STACK , WAMP developer</span>
+                <span className="red">Database: </span>
+                <span className="blue">MongoDB, MongoDB Atlas, Mongoose, MySQL</span>
               </li>
-              {/* <li>Phone: <span>+91 9876543210</span></li> */}
+              <li>
+                <span className="red">Tools: </span>
+                <span className="blue">Git, GitHub, Linux, Postman, VS Code, Vite</span>
+              </li>
+              <li>
+                <span className="red">Languages: </span>
+                <span className="blue">C, C++, Python</span>
+              </li>
             </ul>
           </div>
           <div className="personalinfo">
@@ -144,8 +142,8 @@ function About() {
       </div>
       <div className="rightabout">
         <Card title="MERN Stack Developer" img={mern} />
-        <Card title="Java Developer" img={java} />
-        <Card title="DSA Developer" img={dsa} />
+        <Card title="Frontend Developer" img={reactIcon} />
+        <Card title="Backend Developer" img={backendIcon} />
       </div>
     </div>
   );
