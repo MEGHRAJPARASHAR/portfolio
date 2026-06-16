@@ -1,71 +1,77 @@
-# Portfolio Website
+# Meghraj Parashar - Personal Portfolio
 
-A modern, responsive personal portfolio website built with **React** and **Vite**. This project showcases my skills and projects with smooth animations powered by **GSAP** and interactive features like a typing effect and scroll-triggered animations.
+Welcome to my personal portfolio repository! This is a dynamic, fully responsive, and animated single-page application built to showcase my skills, projects, and personal information as a Full Stack Web Developer.
 
-![Portfolio Screenshot](./src/assets/man.png) <!-- Replace with an actual screenshot if available -->
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation & Setup](#installation--setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+🌐 **Live Demo:** [https://meghraj-parashar.github.io/portfolio](https://meghraj-parashar.github.io/portfolio)
 
 ---
 
-## Overview
+## ✨ Features
 
-This portfolio website is designed to introduce who I am, my skills, and the services I offer as a developer. It includes the following sections:
+- **Modern UI/UX:** Dark mode aesthetics with vibrant color gradients and glass-morphism effects.
+- **Scroll Animations:** Smooth scroll-triggered entrance animations powered by **GSAP**.
+- **Fully Responsive:** Optimized layout for Desktops, Tablets, and Mobile phones.
+- **Typing Effect:** Dynamic hero section typing animation (`react-typing-effect`).
+- **Smooth Navigation:** Single-page smooth scrolling to different sections (`react-scroll`).
+- **Contact Form:** Working contact form integration via Formspree.
 
-- **Home:** A landing page featuring an animated introduction with a dynamic typing effect.
-- **About:** Personal details, skills, and education information presented with engaging scroll-triggered animations.
-- **Projects (optional):** A section (currently commented out) intended for showcasing work.
-- **Contact:** A contact form integrated with [Formspree](https://formspree.io) to easily get in touch.
+## 🛠️ Tech Stack
 
-Animations are implemented using **GSAP** (GreenSock Animation Platform) along with the **ScrollTrigger** plugin to add a modern, interactive feel to the user experience.
+- **Frontend Framework:** [React.js](https://reactjs.org/) (v18)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** Vanilla CSS (Flexbox & CSS Grid)
+- **Animations:** [GSAP](https://greensock.com/gsap/) & `@gsap/react`
+- **Deployment:** GitHub Pages (`gh-pages`)
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── src/
+│   ├── assets/           # Images and SVG icons
+│   ├── COMPONENTS/       # Reusable React components
+│   │   ├── ABOUT/        # Personal info and skills
+│   │   ├── CARD/         # Generic UI cards
+│   │   ├── CONTACT/      # Formspree contact form
+│   │   ├── HOME/         # Hero section
+│   │   ├── NAV/          # Responsive navigation bar
+│   │   └── PROJECTS/     # Portfolio projects gallery
+│   ├── App.jsx           # Main application layout
+│   ├── main.jsx          # React DOM rendering entry point
+│   └── index.css         # Global CSS variables and resets
+├── vite.config.js        # Vite build configuration
+└── package.json          # Dependencies and scripts
+```
+
+## 🚀 Running Locally
+
+If you'd like to clone and run this project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/MEGHRAJPARASHAR/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 📫 Contact Me
+
+- **Email:** meghrajparashar@gmail.com
+- **GitHub:** [@MEGHRAJPARASHAR](https://github.com/MEGHRAJPARASHAR)
 
 ---
-
-## Features
-
-- **Responsive Navigation:**  
-  A mobile-friendly hamburger menu with smooth transitions using react-scroll and GSAP animations.
-
-- **Animated Introduction:**  
-  Home section with a typing effect (via [react-typing-effect](https://www.npmjs.com/package/react-typing-effect)) and animated text lines.
-
-- **About Section with Scroll Animations:**  
-  Personal info, skills, and education details reveal themselves with subtle animations as you scroll down.
-
-- **Project Cards:**  
-  Reusable card components to display skills (MERN Stack, Java, DSA) with hover effects.
-
-- **Interactive Contact Form:**  
-  A contact form that submits data via Formspree, ensuring hassle-free communication.
-
----
-
-## Tech Stack
-
-- **Frontend Framework:** React (via Vite)
-- **Build Tool:** Vite
-- **Animation Library:** GSAP with ScrollTrigger
-- **CSS:** Custom CSS modules for component-level styling
-- **Additional Libraries:**  
-  - [react-scroll](https://www.npmjs.com/package/react-scroll) for smooth scrolling  
-  - [react-typing-effect](https://www.npmjs.com/package/react-typing-effect) for animated text
-
----
-
-## Project StructureBelow is the project structure code formatted as a Markdown code block. You can simply paste it into your README.md file:
-
-
-
-portfolio/ ├── .gitignore ├── package.json ├── package-lock.json ├── README.md ├── eslint.config.js ├── index.html ├── vite.config.js └── src/ ├── App.jsx ├── assets/ │   ├── man.png         // Home section image │   ├── mern.png        // Skill card image for MERN Stack │   ├── java.png        // Skill card image for Java │   ├── dsa.png         // Skill card image for DSA │   └── contact.png     // Contact section image └── COMPONENTS/ ├── NAV/ │   ├── Navbar.jsx │   └── Navbar.css ├── HOME/ │   ├── home.jsx │   └── home.css ├── ABOUT/ │   ├── about.jsx │   └── about.css ├── CARD/ │   ├── card.jsx │   └── card.css └── CONTACT/ ├── contact.jsx └── contact.css
+*If you like my work, feel free to drop a ⭐ on this repository!*
