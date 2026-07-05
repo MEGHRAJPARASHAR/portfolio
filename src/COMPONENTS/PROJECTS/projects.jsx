@@ -7,35 +7,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
   {
-    title: 'Bingo — Food Delivery App',
-    tech: ['Node.js', 'Express.js', 'MongoDB Atlas', 'React.js', 'Redux Toolkit', 'TailwindCSS', 'JWT', 'Nodemailer', 'bcryptjs'],
+    title: 'BiteRush — Full Stack Food Delivery Platform',
+    tech: ['React.js', 'TypeScript', 'Redux Toolkit', 'Node.js', 'Express.js v5', 'MongoDB', 'Socket.IO', 'Razorpay', 'Cloudinary'],
     description:
-      'Production-grade MERN food delivery platform with a 3-role system (Customer · Owner · Delivery Boy). Features OTP-based password reset via email, JWT + httpOnly cookie auth, role-based middleware, Redux Toolkit state management, and REST APIs for shops, menu items, cart, and orders. Cart total calculated on-the-fly — no redundant DB storage. Built with MVC architecture.',
+      'Production-grade full-stack food delivery platform with 3 user roles (Customer, Restaurant Owner, Delivery Partner), 8 route modules, and 30+ REST API endpoints. Features Google OAuth 2.0, JWT authentication, OTP-based forgot-password via Nodemailer, Razorpay payments with HMAC-SHA256 verification, and real-time order tracking via Socket.IO.',
     highlights: [
-      '7 auth routes including OTP forgot-password flow',
-      '3-role RBAC: Customer, Shop Owner, Delivery Boy',
-      'JWT + httpOnly cookies for secure, stateless auth',
-      'Cart total computed on-the-fly (no redundant storage)',
-      'Coming: Razorpay · Socket.io · Live map tracking',
-    ],
-    status: 'dev',
-    statusLabel: 'In Development',
-    github: 'https://github.com/MEGHRAJPARASHAR/FoodDeliveryApp',
-  },
-  {
-    title: 'Coffee E-Commerce',
-    tech: ['React.js', 'Vite', 'Firebase'],
-    description:
-      'Responsive e-commerce frontend for a coffee brand. Integrated Firebase for user authentication and real-time data storage. Deployed live with full Firebase Auth flow; Razorpay payment integration planned.',
-    highlights: [
-      'Live client deployment',
-      'Firebase Auth + real-time DB',
-      'Component-based React architecture',
+      '3 user roles: Customer, Restaurant Owner, Delivery Partner',
+      '30+ REST API endpoints across 8 route modules (MVC)',
+      'Google OAuth 2.0 + JWT auth + OTP forgot-password flow',
+      'Razorpay payment gateway with server-side signature verification',
+      'Real-time order tracking via Socket.IO room-based architecture',
+      '6 Mongoose schemas with Cloudinary image uploads via Multer',
     ],
     status: 'live',
     statusLabel: 'Live',
-    live: 'https://react-coffe-website.vercel.app/',
-    github: 'https://github.com/MEGHRAJPARASHAR',
+    live: 'https://bite-rush-delta.vercel.app/',
+    github: 'https://github.com/MEGHRAJPARASHAR/BiteRush-',
   },
   {
     title: 'CS Quiz Platform',
@@ -49,24 +36,11 @@ const PROJECTS = [
     ],
     status: 'done',
     statusLabel: 'Completed',
+    live: 'https://meghrajparashar.github.io/quiz',
     github: 'https://github.com/MEGHRAJPARASHAR/quiz',
   },
-  {
-    title: 'Todo List App',
-    tech: ['React.js', 'JavaScript', 'CSS'],
-    description:
-      'A clean, responsive task management app built with React. Supports adding, completing, and deleting tasks with a minimal UI — deployed live on GitHub Pages.',
-    highlights: [
-      'Add, complete, and delete tasks',
-      'React component-based architecture',
-      'Deployed on GitHub Pages',
-    ],
-    status: 'live',
-    statusLabel: 'Live',
-    live: 'https://meghrajparashar.github.io/TodoList_Host/',
-    github: 'https://github.com/MEGHRAJPARASHAR/TodoList_Host',
-  },
 ];
+
 
 import { useRef } from 'react';
 function Projects() {

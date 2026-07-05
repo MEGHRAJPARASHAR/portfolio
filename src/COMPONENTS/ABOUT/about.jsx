@@ -129,8 +129,12 @@ function About() {
                 <span className="blue">BCA</span>
               </li>
               <li>
+                <span className="red">Senior Secondary (XII): </span>
+                <span className="blue">Science Stream — 85% (CBSE)</span>
+              </li>
+              <li>
                 <span className="red">Master Diploma of: </span>
-                <span className="blue">Software engeneering</span>
+                <span className="blue">Software Engineering</span>
               </li>
               <li>
                 <span className="red">University: </span>
